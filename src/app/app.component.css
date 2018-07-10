@@ -1,0 +1,59 @@
+:host monaco-editor{ height: 300px; display:block; border: 1px solid #ccc; }
+
+.container{
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center{
+  text-align: center;
+}
+
+.btn{
+  width: 80px;
+  padding: 10px 0;
+  background: #555;
+  color:white;
+  border: none;
+  float: left;
+}
+
+.btn:hover{
+  background: black;
+}
+
+div h2{
+  float: left;
+}
+
+.output-container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buttons-container {
+    align-self: flex-start;
+    width: auto;
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+}
+
+
+.output {
+    border: 1px solid #ccc;
+    display: flex;
+    flex: 10 150px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.output code {
+  width: 90%;
+  height: 100px;
+  white-space: pre;
+  vertical-align: middle;
+  word-break: break-word;
+  overflow-y: auto;
+}
