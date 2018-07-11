@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { MonacoEditorModule, COMPLETION_PROVIDERS } from 'ngx-monaco';
 
 import { TravisCompletionService } from './providers/travis-completion.service';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

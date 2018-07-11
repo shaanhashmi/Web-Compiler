@@ -57,3 +57,7 @@ div h2{
   word-break: break-word;
   overflow-y: auto;
 }
+
+:host /deep/ header{
+    display: none !important;
+}
