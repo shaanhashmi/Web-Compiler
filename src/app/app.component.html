@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="text-center">
+    <h1>Online {{ title }} Editor</h1>
+  </div>
+  <monaco-editor theme="vs" [file]="file" (fileChange)="onFileChange($event)"></monaco-editor>
+
+  <div class="output-container">
+    <div class="buttons-container">
+      <button class="btn" (click)="execute()">Run</button>
+    </div>
+
+    <div class="output" id="output">
+      <code></code>
+    </div>
+  </div>
+</div>
