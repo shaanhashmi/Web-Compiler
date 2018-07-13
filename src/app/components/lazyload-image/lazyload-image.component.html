@@ -1,0 +1,42 @@
+<!-- ng-lazyload-image module -->
+<mat-toolbar>
+  <div class="d-flex justify-content-between w-100">
+    <h2>Techguy</h2>
+    <div>
+      <button mat-button>Home</button>
+      <button mat-button [matMenuTriggerFor]="menu">Gallary</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Gallary 1</button>
+        <button mat-menu-item>Gallary 2</button>
+      </mat-menu>
+      <button mat-button>Service</button>
+      <button mat-button>About</button>
+    </div>
+  </div>
+</mat-toolbar>
+
+<div class="container">
+  <div class="heading mt-5">
+    <mat-card>
+      <div class="d-flex justify-content-between">
+        <h2>Gallary</h2>
+        <button mat-raised-button color="accent" (click)="openSnackBar('Gallary')">Open lightbox</button>
+      </div>
+    </mat-card>
+
+  </div>
+  <div class="cards">
+    <!-- <div class="w-100"> -->
+    <img *ngFor="let img of items; let i=index " (click)="lightbox.open(i) " [defaultImage]="defaultImage
+            " [lazyLoad]="img.data.src " [useSrcset]="true " [offset]="offset ">
+    <!-- </div> -->
+  </div>
+</div>
+
+
+<!-- Image tags -->
+<!-- <div class="container ">
+  <div class="cards " lazy-load-images>
+    <img *ngFor="let img of items; let i=index " (click)="lightbox.open(i) " [src]="img.data.src ">
+  </div>
+</div> -->
